@@ -1,0 +1,373 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body, textarea, button {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-size-micro: 0.5rem;
+    --font-size-small: 0.75rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 1.5rem;
+    --font-size-extra-large: 2rem;
+    --font-weight-default: 400;
+    --font-weight-thin: 300;
+    --font-weight-thick: 500;
+    --font-weight-extra-thick: 600;
+    --font-weight-bold: 800;
+
+    --background-white: #fcf6f5;
+    --primary-blue: #5e81f4;
+    --primary-white: #ffffff;
+    --primary-blue-light: hsla(226, 87%, 66%, 0.082);
+    --primary-black1: #323232;
+    --primary-black2: #3E4958;
+    --primary-gray1: #e2e0e0;
+    --primary-gray2: #666666;
+    --primary-gray3: #c7c7c7; 
+    --primary-orange: #E85D36;
+
+    --box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.head {
+    min-height: 10vh;
+    align-content: center;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.logo {
+    background: url('../img/logo.png') no-repeat center;
+    background-size: contain;
+    color: transparent;
+    max-width: 100%;
+    /* TODO width 반응형 처리 */
+    width: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+.category-con {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.category {
+    padding: 1rem 2rem;
+    border: 0.5px solid var(--primary-black2);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.category.on {
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+    border: 0.2px solid var(--primary-blue);
+}
+
+.wrap {
+    max-width: 1400px;
+    width: 80%;
+    margin: auto;
+}
+
+.sec-search {
+    min-height: 15vh;
+    display: flex;
+    gap: 1rem;
+}
+
+.sec-search .search-area {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    position: relative;
+}
+
+
+.sec-search .search-area .city-list,
+.sec-search .search-area .icon-area  {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sec-search .search-area .city-list {
+    left: 0;
+    height: 50px;
+    width: 20%;
+    border-right: 1px solid var(--primary-black2);
+    border-radius: 10px 0 0 10px;
+    padding: 0 1rem;
+}
+
+.sec-search .search-area .search-input {
+    height: 50px;
+    width: 100%;
+    padding-left: 8rem;
+    padding-right: 4rem;
+    border-radius: 10px;
+    border: 0.5px solid var(--primary-black2);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+.sec-search .search-area .icon-area {
+    right: 0;
+    width: 10%;
+    background-color: #5e81f4;
+    height: 50px;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sec-search .text-area {
+    width: 60%;
+    align-content: center;
+}
+
+.sec-search .text-area > h2 {
+    text-align: right;
+    font-size: var(--font-size-large);
+    line-height: 1.5;
+}
+
+.sec-search .text-area > h2 > span {
+    color: var(--primary-blue);
+    font-weight: var(--font-weight-bold);
+}
+
+.sec-content {
+    height: 75vh;
+    gap: 1rem;
+    display: flex;
+}
+
+.sec-content .content-list {
+    width: 40%;
+    overflow-y: auto;
+}
+
+.sec-content .content-list::-webkit-scrollbar {
+    width: 15px;
+}
+.sec-content .content-list::-webkit-scrollbar-track,
+.sec-content .content-list::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+}
+
+.sec-content .content-list::-webkit-scrollbar-track {
+    background-color: var(--primary-gray1);
+}
+
+.sec-content .content-list::-webkit-scrollbar-thumb {
+    background-color: var(--primary-gray3);
+}
+
+.sec-content .content-list .list-con {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-right: 10px;
+}
+
+.sec-content .list-con .list {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    height: 18vh;
+    background-color: var(--primary-white);
+    border: 1px solid var(--primary-black2);
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem;
+    transition: background-color 0.5s ease;
+}
+
+.sec-content .list-con .list:hover {
+    background-color: var(--primary-blue-light);
+}
+
+.sec-content .list .img-area {
+    width: 45%;
+    background: url('../img/logo.png') no-repeat center;
+    background-size: contain;
+    border: 1px solid var(--primary-gray1);
+    border-radius: 20px;
+}
+
+.sec-content .list .text-area {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sec-content .list .text-area > p {
+    font-size: var(--font-size-large);
+    padding-bottom: 1rem;
+    flex: 1;
+}
+
+.sec-content .list .text-area > span {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    line-height: 1;
+    position: relative;
+}
+
+.sec-content .list .text-area .target::before,
+.sec-content .list .text-area .location::before,
+.sec-content .list .text-area .date::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* 예시 아이콘 이미지 설정 */
+.sec-content .list .text-area .target::before {
+    background: url('/img/user.png') no-repeat center;
+    background-size: contain;
+}
+
+.sec-content .list .text-area .location::before {
+    background: url('/img/pin.png') no-repeat center;
+    background-size: contain;
+}
+
+.sec-content .list .text-area .date::before {
+    background: url('/img/calender.png') no-repeat center;
+    background-size: contain;
+}
+
+.sec-content .list::after {
+    content: "일시중지";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+    font-size: var(--font-size-small);
+    padding: 0.5rem;
+    border-radius: 20px;
+    width: 50px;
+    text-align: center;
+}
+
+.sec-content .pagination {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-content .pagination .prev,
+.sec-content .pagination .next,
+.sec-content .pagination span {
+    width: 25px;
+    height: 25px;
+}
+
+.sec-content .pagination .prev {
+    background: url("../img/left-arrow.png") no-repeat center;
+}
+
+.sec-content .pagination .next {
+    background: url("../img/right-arrow.png") no-repeat center;
+}
+
+.sec-content .pagination > span {
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    color: var(--background-white);
+    display: inline-block;
+    align-content: center;
+}
+
+.sec-content .detail {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+}
+
+.sec-content .detail .map {
+    height: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--primary-gray1);
+    padding: 20px;
+}
+
+.sec-content .detail .detail-con {
+    height: 0;
+    overflow: hidden;
+}
+
+.detail.on {
+    gap: 1rem;
+}
+
+.detail.on .map {
+    height: 60%;
+}
+
+.detail.on .detail-con {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: right;
+}
+
+.detail-con textarea {
+    width: 100%;
+    border-radius: 20px;
+    max-height: 200px;
+    max-width: 830px;
+    height: 30vh;
+    padding: 1rem;
+    line-height: 1.5;
+    border: 1px solid var(--primary-blue);
+}
+
+.reserve-btn {
+    display: block;
+    width: 30%;
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-medium);
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    align-self: flex-end; 
+}

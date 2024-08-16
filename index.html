@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울시 교육 공공서비스예약 정보</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./common.js" defer></script>
+</head>
+
+<body>
+    <header class="head">
+        <nav class="nav-list">
+            <h1 class="logo"></h1>
+            <ul class="category-con">
+                <!-- TODO 스크립트에서 setting -->
+                <li class="category" data-category="0">전체</li>
+                <li class="category" data-category="1">공예/취미</li>
+                <li class="category" data-category="2">교양/어학</li>
+                <li class="category" data-category="3">도시/농업</li>
+                <li class="category" data-category="4">미술/제작</li>
+                <li class="category" data-category="5">스포츠</li>
+                <li class="category" data-category="6">역사</li>
+                <li class="category" data-category="7">자연과학</li>
+                <li class="category" data-category="8">전문자격증</li>
+                <li class="category" data-category="9">정보/통신</li>
+                <li class="category" data-category="10">청년/정보</li>
+                <li class="category" data-category="11">기타</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="wrap">
+        <section class="sec-search">
+            <div class="search-area">
+                <select name="cityList" class="city-list" id="cityList">
+                    <!-- TODO 스크립트에서 setting -->
+                    <option value="">지역명</option>
+                </select>
+                <input type="text" class="search-input" id="searchInput" placeholder="검색어를 입력해주세요">
+                <div class="icon-area">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="text-area">
+                <h2>
+                    서울특별시 <span>교육 공공서비스</span> 예약<br>
+                    이용하시려는 서비스를 빠르게 예약해보세요
+                </h2>
+            </div>
+        </section>
+        <section class="sec-content">
+            <div class="content-list">
+                <ul class="list-con">
+                    <li class="list">
+                        <div class="img-area"></div>
+                         <div class="text-area">
+                            <p>제목영역</p>
+                            <span class="target">대상자</span>
+                            <span class="location">장소</span>
+                            <span class="date">날짜</span>
+                         </div>
+                    </li>
+                    <li class="list">
+                         <div class="img-area"></div>
+                         <div class="text-area">
+                            <p>제목영역</p>
+                            <span class="target">대상자</span>
+                            <span class="location">장소</span>
+                            <span class="date">날짜</span>
+                         </div>
+                    </li>
+                    <li class="list">
+                        <div class="img-area"></div>
+                         <div class="text-area">
+                            <p>제목영역</p>
+                            <span class="target">대상자</span>
+                            <span class="location">장소</span>
+                            <span class="date">날짜</span>
+                         </div>
+                    </li>
+                    <li class="list">
+                        <div class="img-area"></div>
+                         <div class="text-area">
+                            <p>제목영역</p>
+                            <span class="target">대상자</span>
+                            <span class="location">장소</span>
+                            <span class="date">날짜</span>
+                         </div>
+                    </li>
+
+                    <li class="list">
+                        <div class="img-area"></div>
+                         <div class="text-area">
+                            <p>제목영역</p>
+                            <span class="target">대상자</span>
+                            <span class="location">장소</span>
+                            <span class="date">날짜</span>
+                         </div>
+                    </li>
+                    
+                </ul>
+                <div class="pagination">
+                    <button class="prev"></button>
+                    <span>1</span>
+                    <span>2</span>
+                    <button class="next"></button>
+                </div>
+            </div>
+            <div class="detail on">
+                <div class="map"></div>
+                <div class="detail-con">
+                    <textarea name="" id=""></textarea>
+                    <button class="reserve-btn" id="reserveBtn">예약하러가기</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
