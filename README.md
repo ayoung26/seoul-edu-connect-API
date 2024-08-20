@@ -7,7 +7,8 @@
 </br>
 
 ## 📍 와이어프레임 (web/mobile)
-<img src="https://github.com/user-attachments/assets/601122f0-0af6-432c-8c10-955ebcf28d1e" width="500" height="400"/>
+<img src="https://github.com/user-attachments/assets/601122f0-0af6-432c-8c10-955ebcf28d1e" width="700" height="550"/>
+
 <img src="https://github.com/user-attachments/assets/8912530a-d667-47e0-90a6-6fb00234be77" width="200" height="450"/>
 <img src="https://github.com/user-attachments/assets/5d4869d3-679d-4b03-80bc-f3145118cfd2" width="200" height="450"/>
 </br>
